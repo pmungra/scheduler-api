@@ -17,7 +17,9 @@ wss.on("connection", socket => {
   };
 });
 
+// eslint-disable-next-line func-style
 function updateAppointment(id, interview) {
+  // eslint-disable-next-line func-names
   wss.clients.forEach(function eachClient(client) {
     if (client.readyState === WebSocket.OPEN) {
       client.send(

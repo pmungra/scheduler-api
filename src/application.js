@@ -14,6 +14,7 @@ const days = require("./routes/days");
 const appointments = require("./routes/appointments");
 const interviewers = require("./routes/interviewers");
 
+// eslint-disable-next-line func-style
 function read(file) {
   return new Promise((resolve, reject) => {
     fs.readFile(
@@ -29,6 +30,7 @@ function read(file) {
   });
 }
 
+// eslint-disable-next-line func-names
 module.exports = function application(
   ENV,
   actions = { updateAppointment: () => {} }
